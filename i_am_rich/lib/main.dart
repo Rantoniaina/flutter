@@ -9,9 +9,7 @@ void main() {
       backgroundColor: Colors.blueGrey[900],
     ),
     body: const Center(
-      child: Image(
-          image:
-              NetworkImage('https://www.w3schools.com/w3css/img_lights.jpg')),
+      child: Image(image: AssetImage('images/diamond.png')),
     ),
   )));
 }
