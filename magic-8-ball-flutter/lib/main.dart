@@ -27,15 +27,19 @@ class _BallState extends State<Ball> {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Expanded(
-          child: TextButton(
-        child: Image.asset('images/ball$ballNumber.png'),
-        onPressed: () {
-          setState(() {
-            ballNumber = Random().nextInt(5) + 1;
-          });
-        },
-      )),
+      child: Row(
+        children: [
+          Expanded(
+              child: TextButton(
+            child: Image.asset('images/ball$ballNumber.png'),
+            onPressed: () {
+              setState(() {
+                ballNumber = Random().nextInt(5) + 1;
+              });
+            },
+          )),
+        ],
+      ),
     );
   }
 }
