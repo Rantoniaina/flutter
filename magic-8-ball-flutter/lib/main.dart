@@ -13,11 +13,27 @@ void main() => runApp(
       ),
     );
 
+class Ball extends StatefulWidget {
+  const Ball({Key key}) : super(key: key);
+
+  @override
+  State<Ball> createState() => _BallState();
+}
+
+class _BallState extends State<Ball> {
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Expanded(child: Image.asset('images/ball1.png')),
+    );
+  }
+}
+
 class BallPage extends StatelessWidget {
   const BallPage({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Ball();
   }
 }
